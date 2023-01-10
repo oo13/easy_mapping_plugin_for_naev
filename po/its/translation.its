@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<its:rules xmlns:its="http://www.w3.org/2005/11/its" version="1.0">
+  <!-- General Rules -->
+  <its:preserveSpaceRule selector="//*" space="preserve"/>
+  <its:translateRule selector="/*" translate="no"/>
+  <its:escapeRule selector="//*" escape="no"/>
+  <its:escapeRule selector="//*/@*" escape="no"/>
+
+  <!-- plugin -->
+  <its:translateRule selector="/plugin/@name" translate="yes"/>
+  <its:translateRule selector="/plugin/author" translate="yes"/>
+  <its:translateRule selector="/plugin/description" translate="yes"/>
+</its:rules>
+<!--
+    Copyright © 2017, 2020, 2021 bobbens and UncombedCoconut
+    This file is derived from https://github.com/naev/naev/blob/main/po/its/translation.its, so it's published under CC-BY-SA-4.0: https://creativecommons.org/licenses/by-sa/4.0/.
+    See "https://github.com/naev/naev/blob/main/LICENSE" for the exact copyright notice and license details.
+-->

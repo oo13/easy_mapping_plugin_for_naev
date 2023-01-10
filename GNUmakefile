@@ -20,9 +20,10 @@ LANGS=ja
 XML=plugin.xml
 LUA=events/local_system_map_seller.lua
 
+PODIR=po
 GETTEXTDIR=gettext
-ITS=$(GETTEXTDIR)/its/translation.its
-POTFILE=$(GETTEXTDIR)/easy_mapping.pot
+ITS=$(PODIR)/its/translation.its
+POTFILE=$(PODIR)/easy_mapping.pot
 MOFILES=$(LANGS:%=$(GETTEXTDIR)/%/LC_MESSAGES/naev.mo)
 
 pot: $(POTFILE)
@@ -32,10 +33,10 @@ mo: $(MOFILES)
 $(POTFILE): $(XML) $(LUA) $(ITS)
 	@( xgettext --its=$(ITS) $(XML) -o - ; echo ; \
 	  ( xgettext --from-code UTF-8 $(LUA) -o - | sed '0,/^$$/d' ) ) > $@
-	@echo Create $(LANGS:%=\"$(GETTEXTDIR)/%.po\") from \"$@\", and then run \"make mo\".
+	@echo Create $(LANGS:%=\"$(PODIR)/%.po\") from \"$@\", and then run \"make mo\".
 
 
-$(GETTEXTDIR)/%/LC_MESSAGES/naev.mo: $(GETTEXTDIR)/%.po
+$(GETTEXTDIR)/%/LC_MESSAGES/naev.mo: $(PODIR)/%.po
 	mkdir -p $(dir $@)
 	msgfmt $^ -o $@
 
