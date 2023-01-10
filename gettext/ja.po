@@ -1,0 +1,78 @@
+# Japanese translation of “Easy Mapping Plugin for Naev”
+#
+# This file is published under GPL-3.0-or-later.
+# See "copyright" in the plugin for the exact copyright notice and license details.
+#
+# Japanese translation:
+# Copyright © 2023 OOTA, Masato
+#
+# This plugin is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This plugin is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: esay_mapping_plugin_for_naev 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-10 20:20+0900\n"
+"PO-Revision-Date: 2023-01-10 20:24+0900\n"
+"Last-Translator: OOTA, Masato <ooyooxei+gh@gmail.com>\n"
+"Language-Team: None\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: plugin.xml:2
+msgid "Easy Mapping Mod"
+msgstr "マッピングを簡単にする改造"
+
+#: plugin.xml:3
+msgid "oo13 @ github"
+msgstr "oo13 @ github"
+
+#: plugin.xml:5
+msgid ""
+"A plugin to get the local system maps easily. You can remove this plugin "
+"without any side effects anytime you like."
+msgstr ""
+"系内地図を簡単に手に入れられるようにするプラグイン。"
+"このプラグインは副作用なしにいつでも好きなときに削除できます。"
+
+#: events/local_system_map_seller.lua:43
+msgid "A vending machine of a map seller"
+msgstr "地図販売業者の自動販売機"
+
+#: events/local_system_map_seller.lua:64
+msgid "There seems to be no map seller in this system."
+msgstr "この星系には地図販売業者がいないようだ。"
+
+#: events/local_system_map_seller.lua:75
+msgid "Map Seller"
+msgstr "地図販売業者"
+
+#: events/local_system_map_seller.lua:93
+msgid "\"OH! YOU SEEM TO NEED NO LOCAL SYSTEM MAP, SORRY.\""
+msgstr "｢ああ！　あなたに系内地図は必要ないようですね。失礼しました｣"
+
+#: events/local_system_map_seller.lua:95
+msgid ""
+"\"THE LOCAL SYSTEM MAP ON SALE FOR ONLY {cost}!\"\n"
+"Would you buy the local system map?"
+msgstr ""
+"｢系内地図をたったの {cost} で販売中！｣\n"
+"系内地図を買いたいですか？"
+
+#: events/local_system_map_seller.lua:99
+msgid "You got the local system map."
+msgstr "系内地図を手に入れました。"
