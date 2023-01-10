@@ -43,18 +43,18 @@ local seller = nil
 local NPC_name = _("A vending machine of a map seller")
 
 function create ()
-   if player.credits() < cost then
-      -- You will mechanically ignore the hail from the sales.
-      evt.finish()
-      return
-   end
-
    local cur = system.cur()
    local _, vol, _ = cur:nebula()
    local fac = faction.get("Independent")
    local pr = cur:presence(fac)
    if pr >= minimum_independent_presence and vol <= maximum_volatility then
-      hook.timer(wait_to_hail, "spawn")
+      if player.credits() >= cost then
+         hook.timer(wait_to_hail, "spawn")
+      else
+         -- You will mechanically ignore the hail from the sales.
+         evt.finish()
+         return
+      end
    else
       hook.timer(wait_to_hail, "no_seller_is_found")
    end
