@@ -98,6 +98,8 @@ Would you buy the local system map?]]), {cost=fmt.credits(cost)})) then
         player.pay(-cost)
         player.outfitAdd("Local System Map")
         player.msg(_("You got the local system map."))
+        -- setKnown() calls ovr_refresh() as a side effect.
+        system.cur():setKnown(true)
       end
    end
    player.commClose()
