@@ -21,8 +21,8 @@ This is a plugin for [Naev](https://github.com/naev/naev).
 This plugin makes easy to determine whether or not you know the entire information in the local system map, and also you can get the local system map without a landable spob and a landing.
 
 When you enter a system:
-  1. If there is neither hail nor message: you know already the entire information in the local system map (or you don't have enough credits).
-  1. If you receive either hail or message: you don't grasp the entire information in the local system map.
+1. If there is neither hail nor message: you know already the entire information in the local system map (or you don't have enough credits).
+1. If you receive either hail or message: you don't grasp the entire information in the local system map.
 	1. If you receive a hail from a map seller: you can buy the local system map (even if the system has no landable spob) but, of course, it's expensive.
 	1. If you receive the message "There seems to be no map seller in this system.": you have to discover the information by yourself.
 
