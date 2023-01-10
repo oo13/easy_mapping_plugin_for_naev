@@ -68,6 +68,7 @@ end
 function spawn ()
    if player.numOutfit("Local System Map") > 0 then
       -- A player may discover the information in a few second.
+      evt.finish()
       return
    end
 
