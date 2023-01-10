@@ -25,6 +25,3 @@ When you enter a system:
 1. If you receive either hail or message: you don't grasp the entire information in the local system map.
 	1. If you receive a hail from a map seller: you can buy the local system map (even if the system has no landable spob) but, of course, it's expensive.
 	1. If you receive the message "There seems to be no map seller in this system.": you have to discover the information by yourself.
-
-# Translation?
-Naev seems not to support a translation for a plugin. Japanese players should remove gettext/ja/LC_MESSAGES/naev.mo.

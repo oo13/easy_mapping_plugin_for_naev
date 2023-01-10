@@ -24,7 +24,7 @@ PODIR=po
 GETTEXTDIR=gettext
 ITS=$(PODIR)/its/translation.its
 POTFILE=$(PODIR)/easy_mapping.pot
-MOFILES=$(LANGS:%=$(GETTEXTDIR)/%/LC_MESSAGES/naev.mo)
+MOFILES=$(LANGS:%=$(GETTEXTDIR)/%/LC_MESSAGES/easy_mapping_mod.mo)
 
 pot: $(POTFILE)
 mo: $(MOFILES)
@@ -36,7 +36,7 @@ $(POTFILE): $(XML) $(LUA) $(ITS)
 	@echo Create $(LANGS:%=\"$(PODIR)/%.po\") from \"$@\", and then run \"make mo\".
 
 
-$(GETTEXTDIR)/%/LC_MESSAGES/naev.mo: $(PODIR)/%.po
+$(GETTEXTDIR)/%/LC_MESSAGES/easy_mapping_mod.mo: $(PODIR)/%.po
 	mkdir -p $(dir $@)
 	msgfmt $^ -o $@
 
