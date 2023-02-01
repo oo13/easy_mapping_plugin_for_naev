@@ -61,6 +61,12 @@ function create ()
 end
 
 function no_seller_is_found ()
+   if player.numOutfit("Local System Map") > 0 then
+      -- A player may discover the information in a few second.
+      evt.finish()
+      return
+   end
+
    player.msg("#r" .. _("There seems to be no map seller in this system.") .. "#0")
    evt.finish()
 end
