@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<locatingRules>
+  <locatingRule name="dat" pattern="*.xml" target="translation.its"/>
+</locatingRules>
+<!--
+    Copyright © 2020 BrknRobot
+    This file is derived from https://github.com/naev/naev/blob/main/po/its/translation.loc, so it's published under CC-BY-SA-4.0: https://creativecommons.org/licenses/by-sa/4.0/.
+    See "https://github.com/naev/naev/blob/main/LICENSE" for the exact copyright notice and license details.
+-->

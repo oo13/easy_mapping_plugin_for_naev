@@ -16,13 +16,10 @@
 # Copyright © 2023 OOTA, Masato
 
 
-LANGS=ja
-XML=plugin.xml
-LUA=events/local_system_map_seller.lua
-
 PODIR=po
+LANGS=$(shell cat $(PODIR)/LINGUAS)
+POTFILES=$(PODIR)/POTFILES.in
 GETTEXTDIR=gettext
-ITS=$(PODIR)/its/translation.its
 POTFILE=$(PODIR)/easy_mapping.pot
 MOFILES=$(LANGS:%=$(GETTEXTDIR)/%/LC_MESSAGES/easy_mapping_mod.mo)
 
@@ -30,9 +27,11 @@ pot: $(POTFILE)
 mo: $(MOFILES)
 
 
-$(POTFILE): $(XML) $(LUA) $(ITS)
-	@( xgettext --its=$(ITS) $(XML) -o - ; echo ; \
-	  ( xgettext --from-code UTF-8 $(LUA) -o - | sed '0,/^$$/d' ) ) > $@
+$(POTFILE): $(XML) $(LUA) $(PODIR)/its/* $(PODIR)/LINGUAS $(POTFILES)
+	@( GETTEXTDATADIR=$(PODIR) ; \
+	   export GETTEXTDATADIR ; \
+	   xgettext -f $(POTFILES) -D . --from-code=utf-8 -o $@ ; \
+	 )
 	@echo Create $(LANGS:%=\"$(PODIR)/%.po\") from \"$@\", and then run \"make mo\".
 
 

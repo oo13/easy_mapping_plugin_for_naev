@@ -12,6 +12,17 @@ Copyright: © 2017, 2020, 2021 bobbens and UncombedCoconut
 License: CC-BY-SA-4.0
 Comment: This file is derived from https://github.com/naev/naev/blob/main/po/its/translation.its.
 
+Files: gettext/its/translation.log
+Copyright: © 2020 BrknRobot
+License: CC-BY-SA-4.0
+Comment: This file is derived from https://github.com/naev/naev/blob/main/po/its/translation.loc.
+
+Files:
+ po/LINGUAS
+ po/POTFILES.in
+Copyright: © 2023 OOTA, Masato
+License: CC0-1.0
+
 License: GPL-3.0-or-later
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -455,3 +466,11 @@ License: CC-BY-SA-4.0
  .
  Creative Commons may be contacted at creativecommons.org.
  .
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all copyright
+ and related and neighboring rights to this software to the public domain
+ worldwide. This software is distributed without any warranty.
+ .
+ You should have received a copy of the CC0 1.0 Universal along with
+ this software. If not, see <https://creativecommons.org/publicdomain/zero/1.0/legalcode>.
