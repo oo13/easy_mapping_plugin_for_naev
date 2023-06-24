@@ -28,10 +28,7 @@ mo: $(MOFILES)
 
 
 $(POTFILE): $(XML) $(LUA) $(PODIR)/its/* $(PODIR)/LINGUAS $(POTFILES)
-	@( GETTEXTDATADIR=$(PODIR) ; \
-	   export GETTEXTDATADIR ; \
-	   xgettext -f $(POTFILES) -D . --from-code=utf-8 -o $@ ; \
-	 )
+	GETTEXTDATADIR=$(PODIR) xgettext -f $(POTFILES) -D . --from-code=utf-8 -o $@
 	@echo Create $(LANGS:%=\"$(PODIR)/%.po\") from \"$@\", and then run \"make mo\".
 
 
