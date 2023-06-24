@@ -7,12 +7,12 @@ Files: *
 Copyright: © 2023 OOTA, Masato
 License: GPL-3.0-or-later
 
-Files: gettext/its/translation.its
+Files: po/its/translation.its
 Copyright: © 2017, 2020, 2021 bobbens and UncombedCoconut
 License: CC-BY-SA-4.0
 Comment: This file is derived from https://github.com/naev/naev/blob/main/po/its/translation.its.
 
-Files: gettext/its/translation.log
+Files: po/its/translation.loc
 Copyright: © 2020 BrknRobot
 License: CC-BY-SA-4.0
 Comment: This file is derived from https://github.com/naev/naev/blob/main/po/its/translation.loc.
