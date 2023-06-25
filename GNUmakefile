@@ -20,7 +20,7 @@ PODIR=po
 LANGS=$(shell cat $(PODIR)/LINGUAS)
 POTFILES=$(PODIR)/POTFILES.in
 GETTEXTDIR=gettext
-POTFILE=$(PODIR)/easy_mapping.pot
+POTFILE=$(PODIR)/easy_mapping_mod.pot
 MOFILES=$(LANGS:%=$(GETTEXTDIR)/%/LC_MESSAGES/easy_mapping_mod.mo)
 
 pot: $(POTFILE)
