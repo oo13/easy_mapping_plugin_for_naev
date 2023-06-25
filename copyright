@@ -18,8 +18,10 @@ License: CC-BY-SA-4.0
 Comment: This file is derived from https://github.com/naev/naev/blob/main/po/its/translation.loc.
 
 Files:
+ meson.build
  po/LINGUAS
  po/POTFILES.in
+ po/meson.build
 Copyright: © 2023 OOTA, Masato
 License: CC0-1.0
 
