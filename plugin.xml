@@ -3,7 +3,7 @@
  <author>oo13 @ github</author>
  <version>1.0</version>
  <description>A plugin to get the local system maps easily. You can remove this plugin without any side effects anytime you like.</description>
- <compatibility>^0\.10\..*</compatibility>
+ <compatibility>^0\.1[01]\..*</compatibility>
  <priority>5</priority>
 </plugin>
 <!--

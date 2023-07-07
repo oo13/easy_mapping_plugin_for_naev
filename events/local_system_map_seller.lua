@@ -3,7 +3,13 @@
 <event name="Local System Map Seller">
  <chance>100</chance>
  <location>enter</location>
- <cond>player.numOutfit("Local System Map") &lt; 1 </cond>
+ <cond>
+   if player.outfitNum then
+      return player.outfitNum("Local System Map") &lt; 1
+   else
+      return player.numOutfit("Local System Map") &lt; 1
+   end
+ </cond>
 </event>
 --]]
 --[[
@@ -42,6 +48,14 @@ local timeouthook
 local seller = nil
 local NPC_name = _("A vending machine of a map seller")
 
+function hasLocalMap ()
+   if player.outfitNum then
+      return player.outfitNum("Local System Map") > 0
+   else
+      return player.numOutfit("Local System Map") > 0
+   end
+end
+
 function create ()
    local cur = system.cur()
    local _, vol, _ = cur:nebula()
@@ -61,7 +75,7 @@ function create ()
 end
 
 function no_seller_is_found ()
-   if player.numOutfit("Local System Map") > 0 then
+   if hasLocalMap() then
       -- A player may discover the information in a few second.
       evt.finish()
       return
@@ -72,7 +86,7 @@ function no_seller_is_found ()
 end
 
 function spawn ()
-   if player.numOutfit("Local System Map") > 0 then
+   if hasLocalMap() then
       -- A player may discover the information in a few second.
       evt.finish()
       return
@@ -95,7 +109,7 @@ end
 function hail ()
    hook.rm(timeouthook)
    hook.rm(hailhook)
-   if player.numOutfit("Local System Map") > 0 then
+   if hasLocalMap() then
       -- A player may discover the information in a few second.
       tk.msg(NPC_name, _[["OH! YOU SEEM TO NEED NO LOCAL SYSTEM MAP, SORRY."]])
    else
