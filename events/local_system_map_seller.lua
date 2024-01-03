@@ -26,7 +26,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 
-Copyright © 2023 OOTA, Masato
+Copyright © 2023, 2024 OOTA, Masato
 --]]
 --[[
 When you enter a system:
@@ -96,6 +96,11 @@ function spawn ()
    local seller_faction = faction.dynAdd(nil, "Map_Seller", _("Map Seller"))
    local seller_ship = ship.get("Llama")
    seller = pilot.add(seller_ship, "Trader", pos, NPC_name )
+   if player.misnActive("Seek And Destroy") and not naev.claimTest(system.cur()) then
+      -- Prevent the seller talking about the wanted pilot in the mission "Seek And Destroy."
+      -- This workaround reveals the offstage a bit, so I would use it only when it's necessary.
+      seller:setLeader(player.pilot())
+   end
    seller:setFaction(seller_faction)
    seller:setFriendly()
    seller:setInvincible()

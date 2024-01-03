@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin name="Easy Mapping Mod">
  <author>oo13 @ github</author>
- <version>1.0</version>
+ <version>1.1</version>
  <description>A plugin to get the local system maps easily. You can remove this plugin without any side effects anytime you like.</description>
  <compatibility>^0\.1[01]\..*</compatibility>
  <priority>5</priority>
@@ -20,5 +20,5 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 
-Copyright © 2023 OOTA, Masato
+Copyright © 2023, 2024 OOTA, Masato
 -->
