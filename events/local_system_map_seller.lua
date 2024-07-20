@@ -47,6 +47,7 @@ local hailhook
 local timeouthook
 local seller = nil
 local NPC_name = _("A vending machine of a map seller")
+local older_than_ver012a2 = naev.versionTest(naev.version(), "0.12.0-alpha.1") <= 0
 
 function hasLocalMap ()
    if player.outfitNum then
@@ -96,7 +97,7 @@ function spawn ()
    local seller_faction = faction.dynAdd(nil, "Map_Seller", _("Map Seller"))
    local seller_ship = ship.get("Llama")
    seller = pilot.add(seller_ship, "Trader", pos, NPC_name )
-   if player.misnActive("Seek And Destroy") and not naev.claimTest(system.cur()) then
+   if older_than_ver012a2 and player.misnActive("Seek And Destroy") and not naev.claimTest(system.cur()) then
       -- Prevent the seller talking about the wanted pilot in the mission "Seek And Destroy."
       -- This workaround reveals the offstage a bit, so I would use it only when it's necessary.
       seller:setLeader(player.pilot())
