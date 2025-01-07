@@ -26,7 +26,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this plugin.  If not, see <http://www.gnu.org/licenses/>.
 
-Copyright © 2023, 2024 OOTA, Masato
+Copyright © 2023-2025 OOTA, Masato
 --]]
 --[[
 When you enter a system:
@@ -48,6 +48,7 @@ local timeouthook
 local seller = nil
 local NPC_name = _("A vending machine of a map seller")
 local older_than_ver012a2 = naev.versionTest(naev.version(), "0.12.0-alpha.1") <= 0
+local older_than_ver0122 = naev.versionTest(naev.version(), "0.12.2") <= 0
 
 function hasLocalMap ()
    if player.outfitNum then
@@ -124,8 +125,10 @@ Would you buy the local system map?]]), {cost=fmt.credits(cost)})) then
         player.pay(-cost)
         player.outfitAdd("Local System Map")
         player.msg(_("You got the local system map."))
-        -- setKnown() calls ovr_refresh() as a side effect.
-        system.cur():setKnown(true)
+        if older_than_ver0122 then
+           -- setKnown() calls ovr_refresh() as a side effect.
+           system.cur():setKnown(true)
+        end
       end
    end
    player.commClose()
