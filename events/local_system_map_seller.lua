@@ -47,8 +47,9 @@ local hailhook
 local timeouthook
 local seller = nil
 local NPC_name = _("A vending machine of a map seller")
-local older_than_ver012a2 = naev.versionTest(naev.version(), "0.12.0-alpha.1") <= 0
-local older_than_ver0122 = naev.versionTest(naev.version(), "0.12.2") <= 0
+local new_versiontest_api = type(naev.versionTest(naev.version(), ">=0.13.0-alpha.9")) == "boolean"
+local older_than_ver012a2 = not new_versiontest_api and naev.versionTest(naev.version(), "0.12.0-alpha.1") <= 0
+local older_than_ver0122 = not new_versiontest_api and naev.versionTest(naev.version(), "0.12.2") <= 0
 
 function hasLocalMap ()
    if player.outfitNum then
