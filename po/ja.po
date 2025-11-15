@@ -4,7 +4,7 @@
 # See "copyright" in the plugin for the exact copyright notice and license details.
 #
 # Japanese translation:
-# Copyright © 2023 OOTA, Masato
+# Copyright © 2023, 2025 OOTA, Masato
 #
 # This plugin is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,9 +21,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: esay_mapping_plugin_for_naev 1.0\n"
+"Project-Id-Version: esay_mapping_plugin_for_naev 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-10 20:20+0900\n"
+"POT-Creation-Date: 2025-11-15 20:13+0900\n"
 "PO-Revision-Date: 2023-01-10 20:24+0900\n"
 "Last-Translator: OOTA, Masato <ooyooxei+gh@gmail.com>\n"
 "Language-Team: None\n"
@@ -43,29 +43,33 @@ msgstr "oo13 @ github"
 
 #: plugin.xml:5
 msgid ""
-"A plugin to get the local system maps easily. You can remove this plugin "
+"A plugin to get the local system maps easily. You can disable this plugin "
 "without any side effects anytime you like."
 msgstr ""
-"系内地図を簡単に手に入れられるようにするプラグイン。"
-"このプラグインは副作用なしにいつでも好きなときに削除できます。"
+"系内地図を簡単に手に入れられるようにするプラグイン。このプラグインは副作用な"
+"しにいつでも好きなときに無効化できます。"
 
-#: events/local_system_map_seller.lua:43
+#: plugin.xml:9
+msgid "A plugin to get the local system maps easily."
+msgstr "系内地図を簡単に手に入れられるようにするプラグイン。"
+
+#: events/local_system_map_seller.lua:49
 msgid "A vending machine of a map seller"
 msgstr "地図販売業者の自動販売機"
 
-#: events/local_system_map_seller.lua:64
+#: events/local_system_map_seller.lua:87
 msgid "There seems to be no map seller in this system."
 msgstr "この星系には地図販売業者がいないようだ。"
 
-#: events/local_system_map_seller.lua:75
+#: events/local_system_map_seller.lua:99
 msgid "Map Seller"
 msgstr "地図販売業者"
 
-#: events/local_system_map_seller.lua:93
+#: events/local_system_map_seller.lua:122
 msgid "\"OH! YOU SEEM TO NEED NO LOCAL SYSTEM MAP, SORRY.\""
 msgstr "｢ああ！　あなたに系内地図は必要ないようですね。失礼しました｣"
 
-#: events/local_system_map_seller.lua:95
+#: events/local_system_map_seller.lua:124
 msgid ""
 "\"THE LOCAL SYSTEM MAP ON SALE FOR ONLY {cost}!\"\n"
 "Would you buy the local system map?"
@@ -73,6 +77,6 @@ msgstr ""
 "｢系内地図をたったの {cost} で販売中！｣\n"
 "系内地図を買いたいですか？"
 
-#: events/local_system_map_seller.lua:99
+#: events/local_system_map_seller.lua:128
 msgid "You got the local system map."
 msgstr "系内地図を手に入れました。"

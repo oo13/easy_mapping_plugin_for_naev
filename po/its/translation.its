@@ -10,6 +10,7 @@
   <its:translateRule selector="/plugin/@name" translate="yes"/>
   <its:translateRule selector="/plugin/author" translate="yes"/>
   <its:translateRule selector="/plugin/description" translate="yes"/>
+  <its:translateRule selector="/plugin/abstract" translate="yes"/>
 </its:rules>
 <!--
     Copyright © 2017, 2020, 2021 bobbens and UncombedCoconut
