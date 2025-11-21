@@ -19,6 +19,7 @@
 PODIR=po
 LANGS=$(shell cat $(PODIR)/LINGUAS)
 POTFILES=$(PODIR)/POTFILES.in
+SRC=$(shell cat $(POTFILES))
 GETTEXTDIR=gettext
 POTFILE=$(PODIR)/easy_mapping_mod.pot
 MOFILES=$(LANGS:%=$(GETTEXTDIR)/%/LC_MESSAGES/easy_mapping_mod.mo)
@@ -27,7 +28,7 @@ pot: $(POTFILE)
 mo: $(MOFILES)
 
 
-$(POTFILE): $(XML) $(LUA) $(PODIR)/its/* $(PODIR)/LINGUAS $(POTFILES)
+$(POTFILE): $(SRC) $(PODIR)/its/* $(PODIR)/LINGUAS $(POTFILES)
 	GETTEXTDATADIR=$(PODIR) xgettext -f $(POTFILES) -D . --from-code=utf-8 -o $@
 	@echo Create $(LANGS:%=\"$(PODIR)/%.po\") from \"$@\", and then run \"make mo\".
 

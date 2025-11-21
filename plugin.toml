@@ -2,10 +2,10 @@ identifier = "EasyMapping"
 name = "Easy Mapping Mod"
 author = "oo13 @ github"
 version = "1.1.0"
-abstract = "A plugin to get the local system maps easily."
+abstract = "A plugin to make you get the local system maps easily."
 naev_version = ">= 0.10"
 source = { git = "https://github.com/oo13/easy_mapping_plugin_for_naev" }
-description = "A plugin to get the local system maps easily. You can disable this plugin without any side effects anytime you like."
+description = "A plugin to make you get the local system maps easily. You can disable this plugin without any side effects anytime you like."
 license = "GPL-3.0-or-later"
 release_status = "stable"
 tags = [ "casual" ]

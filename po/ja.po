@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: esay_mapping_plugin_for_naev 1.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-15 20:13+0900\n"
+"POT-Creation-Date: 2025-11-21 11:50+0900\n"
 "PO-Revision-Date: 2023-01-10 20:24+0900\n"
 "Last-Translator: OOTA, Masato <ooyooxei+gh@gmail.com>\n"
 "Language-Team: None\n"
@@ -43,14 +43,14 @@ msgstr "oo13 @ github"
 
 #: plugin.xml:5
 msgid ""
-"A plugin to get the local system maps easily. You can disable this plugin "
-"without any side effects anytime you like."
+"A plugin to make you get the local system maps easily. You can disable this "
+"plugin without any side effects anytime you like."
 msgstr ""
 "系内地図を簡単に手に入れられるようにするプラグイン。このプラグインは副作用な"
 "しにいつでも好きなときに無効化できます。"
 
 #: plugin.xml:9
-msgid "A plugin to get the local system maps easily."
+msgid "A plugin to make you get the local system maps easily."
 msgstr "系内地図を簡単に手に入れられるようにするプラグイン。"
 
 #: events/local_system_map_seller.lua:49
