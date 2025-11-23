@@ -4,6 +4,9 @@
  <chance>100</chance>
  <location>enter</location>
  <cond>
+   if player.cinematicsCheck and player.cinematicsCheck() then
+      return false
+   end
    if player.outfitNum then
       return player.outfitNum("Local System Map") &lt; 1
    else

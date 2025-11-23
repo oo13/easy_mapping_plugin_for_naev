@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin name="Easy Mapping Mod">
  <author>oo13 @ github</author>
- <version>1.1</version>
+ <version>1.2</version>
  <description>A plugin to make you get the local system maps easily. You can disable this plugin without any side effects anytime you like.</description>
  <compatibility>^0\.1[0123]\..*</compatibility>
  <naev_version>&gt;=0.10</naev_version>

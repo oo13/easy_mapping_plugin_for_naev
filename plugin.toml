@@ -1,7 +1,7 @@
 identifier = "EasyMapping"
 name = "Easy Mapping Mod"
 author = "oo13 @ github"
-version = "1.1.0"
+version = "1.2.0"
 abstract = "A plugin to make you get the local system maps easily."
 naev_version = ">= 0.10"
 source = { git = "https://github.com/oo13/easy_mapping_plugin_for_naev" }
